@@ -10,7 +10,7 @@ type User = {
 }
 
 async function POSTtoAPI(user: User) {
-    const response = await fetch("http://localhost:8080/demo/add", {
+    const response = await fetch("http://localhost:9999/demo/add", {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
