@@ -9,7 +9,7 @@ type User = {
 }
 
 async function GETfromAPI() {
-    const response = await fetch("http://localhost:9999/demo/all")
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/demo/all`)
     if (!response.ok) throw new Error('Failed to fetch data')
     const users: User[] = await response.json()
     console.log(users)
